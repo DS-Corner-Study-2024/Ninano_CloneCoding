@@ -60,7 +60,7 @@ public class QuestManager : MonoBehaviour
         questActionIndex = 0;
     }
 
-    void ControlObject()
+    public void ControlObject()
     {
         switch(questId)
         {
@@ -69,6 +69,8 @@ public class QuestManager : MonoBehaviour
                     questObject[0].SetActive(true);
                 break;
             case 20:
+                if (questActionIndex == 0)
+                    questObject[0].SetActive(true);
                 if (questActionIndex == 1)
                     questObject[0].SetActive(false);
                 break;
